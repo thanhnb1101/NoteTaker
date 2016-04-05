@@ -2,6 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="thanhnotes.com.notetaker">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- For android.media.audiofx.Visualizer -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- We will request access to the camera, saying we require a camera
+     of some sort but not one with autofocus capability. -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -15,6 +25,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".modules.camera.CameraModuleActivity" />
+        <activity android:name=".modules.webview.WebviewModuleActivity" />
+        <activity android:name=".modules.webview.WebviewModuleDetailActivity" />
+        <activity android:name=".modules.webservice.WebserviceModuleActivity" />
+
+        <activity android:name=".sqlitesample.AndroidSQLiteTutorialActivity"/>
     </application>
 
 </manifest>

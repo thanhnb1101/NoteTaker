@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_url_direct_browser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mở URL ra trình duyệt Android" />
+
+    <Button
+        android:id="@+id/btn_url_internal_webview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mở URL trên webview, bên trong App" />
+
+    <Button
+        android:id="@+id/btn_display_data_html_webview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hiển thị data html trong webview" />
+
+    <Button
+        android:id="@+id/btn_display_local_file_webview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hiển thị local file html trong webview" />
+</LinearLayout>
