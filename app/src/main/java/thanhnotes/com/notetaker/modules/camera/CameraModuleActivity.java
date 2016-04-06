@@ -28,7 +28,7 @@ public class CameraModuleActivity extends Activity {
     private Uri fileUri;
     private MediaRecorder mRecorder = null;
 
-    private String LOG_TAG = "CameraModuleActivity";
+    private String LOG_TAG = "CameraModuleActivity";//test
 
 
     @Override
