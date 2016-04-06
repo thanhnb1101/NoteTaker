@@ -11,13 +11,17 @@
     <uses-feature android:name="android.hardware.camera" />
 
     <uses-permission android:name="android.permission.INTERNET" />
-
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCatj_CgpogIB0KyRUGbCnj6DUGwx0cYQE" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,8 +33,12 @@
         <activity android:name=".modules.webview.WebviewModuleActivity" />
         <activity android:name=".modules.webview.WebviewModuleDetailActivity" />
         <activity android:name=".modules.webservice.WebserviceModuleActivity" />
+        <activity android:name=".modules.checkin.CheckInModuleActivity"/>
+        <activity android:name=".modules.checkin.ListViewCheckInActivity"/>
 
         <activity android:name=".sqlitesample.AndroidSQLiteTutorialActivity"/>
+
+
     </application>
 
 </manifest>

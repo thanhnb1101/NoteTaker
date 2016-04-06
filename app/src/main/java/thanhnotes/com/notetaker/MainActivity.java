@@ -13,6 +13,7 @@ import java.util.List;
 import thanhnotes.com.notetaker.adapters.ListModuleAdapter;
 import thanhnotes.com.notetaker.models.ModuleItem;
 import thanhnotes.com.notetaker.modules.camera.CameraModuleActivity;
+import thanhnotes.com.notetaker.modules.checkin.CheckInModuleActivity;
 import thanhnotes.com.notetaker.modules.webview.WebviewModuleActivity;
 import thanhnotes.com.notetaker.utils.ConstantUtil;
 
@@ -41,6 +42,11 @@ public class MainActivity extends AppCompatActivity {
         item3.setModuleID(ConstantUtil.MODULE_WEBSERVICE);
         listData.add(item3);
 
+        ModuleItem item4 = new ModuleItem();
+        item4.setModuleName("Check In Module");
+        item4.setModuleID(ConstantUtil.MODULE_CHECKIN);
+        listData.add(item4);
+
         ListModuleAdapter adapter = new ListModuleAdapter(listData, this);
         lvModule.setAdapter(adapter);
 
@@ -57,6 +63,10 @@ public class MainActivity extends AppCompatActivity {
                     case ConstantUtil.MODULE_WEBVIEW:
                         Intent intentWebview = new Intent(MainActivity.this, WebviewModuleActivity.class);
                         startActivity(intentWebview);
+                        break;
+                    case ConstantUtil.MODULE_CHECKIN:
+                        Intent intentCheckIn = new Intent(MainActivity.this, CheckInModuleActivity.class);
+                        startActivity(intentCheckIn);
                         break;
                 }
             }
