@@ -13,6 +13,7 @@ import java.util.List;
 import thanhnotes.com.notetaker.adapters.ListModuleAdapter;
 import thanhnotes.com.notetaker.models.ModuleItem;
 import thanhnotes.com.notetaker.modules.camera.CameraModuleActivity;
+import thanhnotes.com.notetaker.modules.webservice.WebserviceModuleActivity;
 import thanhnotes.com.notetaker.modules.webview.WebviewModuleActivity;
 import thanhnotes.com.notetaker.utils.ConstantUtil;
 
@@ -57,6 +58,11 @@ public class MainActivity extends AppCompatActivity {
                     case ConstantUtil.MODULE_WEBVIEW:
                         Intent intentWebview = new Intent(MainActivity.this, WebviewModuleActivity.class);
                         startActivity(intentWebview);
+                        break;
+
+                    case ConstantUtil.MODULE_WEBSERVICE:
+                        Intent intentWebservice = new Intent(MainActivity.this, WebserviceModuleActivity.class);
+                        startActivity(intentWebservice);
                         break;
                 }
             }
